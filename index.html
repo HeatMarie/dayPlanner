@@ -18,7 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
 
@@ -26,13 +26,111 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead">p</p>
+      <p id="doingThings"></p>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
+      <!-- <div id="hour8"></div>
+      <div id="hour9"></div>
+      <div id="hour10"></div>
+      <div id="hour11"></div>
+      <div id="hour12"></div>
+      <div></div> -->
+
+
+
+      <table class="time-block">
+        <tr class="row" >
+          <th class="col1">Time:</th>
+          <th class="col2">Todo:</th>
+          <th class="col3">Save:</th>
+        </tr>
+        <tr class="row" id="hour8">
+          <td class="col1">8AM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour9">
+          <td class="col1">9AM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour10">
+          <td class="col1">10AM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour11">
+          <td class="col1">11AM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour12">
+          <td class="col1">12PM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour1">
+          <td class="col1">1PM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour2">
+          <td class="col1">2PM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour3">
+          <td class="col1">3PM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour4">
+          <td class="col1">4PM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+        <tr class="row" id="hour5">
+          <td class="col1">5PM</td>
+          <td class="col2">
+            <input class="" type="text" id="midnight" name="midnight">
+          </td>
+          <td class="col3">
+            <button class="saveBtn">Save</button></td>
+        </tr>
+      </table>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@1.26.0/build/global/luxon.min.js"></script>
+    <script src="script/script.js"></script>
   </body>
 </html>
