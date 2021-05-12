@@ -3,7 +3,7 @@ const DateTime = luxon.DateTime;
 const Duration = luxon.Duration;
 let dt = DateTime.now().toLocaleString(DateTime.DATE_FULL);
 
-let saveBtn = document.getElementsByClassName('saveBtn');
+
 
 
 currentDay.innerHTML = dt;
@@ -12,7 +12,12 @@ const today = DateTime.local();
 console.log("today", today)
 let h = today.get('hour')
 
-/* TODO: Check to see if this can become an array of some kind */
+/* TODO: Check to see if this can become an array of some kind 
+        - can you push these into an array? I mean, I know you can, I can do whatever I want. But... Will that work? 
+        such as: 
+        arrayName.push(hour8)
+
+*/
 
 let hour8 = today.set({hour: 8})
 let hour9 = today.set({hour: 9})
@@ -111,7 +116,7 @@ if (hour2.hour < today.hour) {
 
 if (hour3.hour < today.hour) {
     hour03.style.backgroundColor = 'blue';
-} else if (hour13.hour > today.hour){
+} else if (hour3.hour > today.hour){
     hour03.style.backgroundColor = 'purple';
 } else {
     hour04.style.backgroundColor = 'white';
@@ -140,4 +145,27 @@ if (hour5.hour < today.hour) {
 
 
 /* *********** Event Listener ************* */
+const saveBtn = document.getElementsByClassName("saveBtn");
 
+for (i of saveBtn) {
+    i.addEventListener('click', function(event) {
+        event.preventDefault();
+        console.log("click")
+        saveTask()
+        keeptTask()
+    })
+}
+
+const storage = window.localStorage;
+
+function saveTask() {
+    const userInput = document.getElementsByClassName('toDo').value; 
+    storage.setItem("userInput", userInput);    
+}
+
+function keepTask() {
+    
+    let userInput = document.getElementsByClassName("toDo");
+    storage.getItem("userInput");
+    document.getElementsByClassName("toDo").value = userInput;
+}

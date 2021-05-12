@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
@@ -68,21 +68,16 @@ textarea {
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 
-/* #currentDay {
+#currentDay {
   text-align: center;
-} */
+} 
 
-/* .col1 {
-  width: 20%;
+.toDo {
+  padding: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  text-decoration: none;
 }
-
-.col2{
-  width: 100%;
-}
-
-.col3 {
-  width: 20%;
-} */
