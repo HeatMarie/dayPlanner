@@ -53,6 +53,7 @@ if (hour8.hour < today.hour) {
     hour08.style.backgroundColor = 'blue';
 } else if (hour8.hour > today.hour){
     hour08.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour08.style.backgroundColor = 'white';
 }
@@ -61,6 +62,7 @@ if (hour9.hour < today.hour) {
     hour09.style.backgroundColor = 'blue';
 } else if (hour9.hour > today.hour){
     hour09.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour09.style.backgroundColor = 'white';
 }
@@ -69,6 +71,7 @@ if (hour10.hour < today.hour) {
     hour010.style.backgroundColor = 'blue';
 } else if (hour10.hour > today.hour){
     hour010.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour010.style.backgroundColor = 'white';
 }
@@ -77,6 +80,7 @@ if (hour11.hour < today.hour) {
     hour011.style.backgroundColor = 'blue';
 } else if (hour11.hour > today.hour){
     hour011.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour011.style.backgroundColor = 'white';
 }
@@ -86,6 +90,7 @@ if (hour12.hour < today.hour) {
     hour012.style.backgroundColor = 'blue';
 } else if (hour12.hour > today.hour){
     hour012.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour012.style.backgroundColor = 'white';
 }
@@ -94,6 +99,7 @@ if (hour12.hour < today.hour) {
     hour012.style.backgroundColor = 'blue';
 } else if (hour12.hour > today.hour){
     hour012.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour012.style.backgroundColor = 'white';
 }
@@ -102,6 +108,7 @@ if (hour1.hour < today.hour) {
     hour01.style.backgroundColor = 'blue';
 } else if (hour1.hour > today.hour){
     hour01.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour01.style.backgroundColor = 'white';
 }
@@ -110,6 +117,7 @@ if (hour2.hour < today.hour) {
     hour02.style.backgroundColor = 'blue';
 } else if (hour2.hour > today.hour){
     hour02.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour02.style.backgroundColor = 'white';
 }
@@ -118,6 +126,7 @@ if (hour3.hour < today.hour) {
     hour03.style.backgroundColor = 'blue';
 } else if (hour3.hour > today.hour){
     hour03.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour04.style.backgroundColor = 'white';
 }
@@ -126,6 +135,7 @@ if (hour4.hour < today.hour) {
     hour04.style.backgroundColor = 'blue';
 } else if (hour4.hour > today.hour){
     hour04.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour04.style.backgroundColor = 'white';
 }
@@ -136,6 +146,7 @@ if (hour5.hour < today.hour) {
     hour05.style.backgroundColor = 'blue';
 } else if (hour5.hour > today.hour){
     hour05.style.backgroundColor = 'purple';
+    hour012.style.color = 'white';
 } else {
     hour05.style.backgroundColor = 'white';
 }
@@ -152,20 +163,31 @@ for (i of saveBtn) {
         event.preventDefault();
         console.log("click")
         saveTask()
-        keeptTask()
+        keepTask()
     })
 }
 
 const storage = window.localStorage;
+const thisBetterWork = [];
 
 function saveTask() {
-    const userInput = document.getElementsByClassName('toDo').value; 
-    storage.setItem("userInput", userInput);    
+    const userInput = document.getElementsByClassName('toDo')
+    for(i = 0; i < userInput.length; i++) {
+        
+        (console.log("userInput", userInput[i].value))
+        thisBetterWork.push(userInput[i].value);
+        console.log("thisBetterWork", thisBetterWork)
+      
+    }
+    console.log("userInput", userInput)
+    const taskInput = storage.setItem("thisBetterWork", JSON.stringify(thisBetterWork)); 
+    console.log('taskInput', taskInput)  
+     
 }
 
 function keepTask() {
     
-    let userInput = document.getElementsByClassName("toDo");
-    storage.getItem("userInput");
-    document.getElementsByClassName("toDo").value = userInput;
+    let userInput = document.getElementsByClassName("toDo").value;
+    
+    userInput[i].value.innerHTML = storage.getItem("thisBetterWork");
 }
