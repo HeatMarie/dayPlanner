@@ -25,12 +25,7 @@ currentDay.innerText =
 
 
 
-/* TODO: Check to see if this can become an array of some kind 
-        - can you push these into an array? I mean, I know you can, I can do whatever I want. But... Will that work? 
-        such as: 
-        arrayName.push(hour8)
-
-*/
+/* Selects each element and gives it its special hour*/
 
 let hour8 = today.set({hour: 8})
 let hour9 = today.set({hour: 9})
@@ -45,7 +40,7 @@ let hour5 = today.set({hour: 17})
 
 console.log(hour5);
 
-/*TODO: Again, find a better way to do this */
+/* Sets the variable to obtain by element */
 
 let hour08 = document.getElementById('hour8')
 let hour09 = document.getElementById('hour9')
@@ -60,8 +55,22 @@ let hour05 = document.getElementById('hour5')
 
 
 
-/* TODO: FIND A LOOP FOR THIS. BUT IF NO LOOP IS FOUND *SHRUG* I guess it's done? */
+/* Each if statement runs through to check if the element is
+   past: (less than/before the current hour
+        properties given: 
+            backgroundColor - blue;
+            color - "white
+    future:(greater than/after the current hour) 
+        properties given: 
+            backgroundColor: purple;
+            color: white;
+    present:(=== or really just not anything else)
+        propertiess given: 
+            backgroundColor: white;
 
+*/
+
+/* =============== 8AM =============== */
 if (hour8.hour < today.hour) {
     hour08.style.backgroundColor = 'blue';
     hour08.style.color = 'white';
@@ -71,6 +80,8 @@ if (hour8.hour < today.hour) {
 } else {
     hour08.style.backgroundColor = 'white';
 }
+
+/* ============= 9AM ================= */
 
 if (hour9.hour < today.hour) {
     hour09.style.backgroundColor = 'blue';
@@ -82,6 +93,8 @@ if (hour9.hour < today.hour) {
     hour09.style.backgroundColor = 'white';
 }
 
+/* ============== 10AM ============== */
+
 if (hour10.hour < today.hour) {
     hour010.style.backgroundColor = 'blue';
     hour010.style.color = 'white'
@@ -91,6 +104,8 @@ if (hour10.hour < today.hour) {
 } else {
     hour010.style.backgroundColor = 'white';
 }
+
+/* ============= 11AM =============== */
 
 if (hour11.hour < today.hour) {
     hour011.style.backgroundColor = 'blue';
@@ -103,6 +118,8 @@ if (hour11.hour < today.hour) {
 }
 
 
+/* ============== 12PM ============= */
+
 if (hour12.hour < today.hour) {
     hour012.style.backgroundColor = 'blue';
     hour012.style.color = 'white';
@@ -113,15 +130,7 @@ if (hour12.hour < today.hour) {
     hour012.style.backgroundColor = 'white';
 }
 
-// if (hour12.hour < today.hour) {
-//     hour012.style.backgroundColor = 'blue';
-//     hour012.style.color = 'color';
-// } else if (hour12.hour > today.hour){
-//     hour012.style.backgroundColor = 'purple';
-//     hour012.style.color = 'white';
-// } else {
-//     hour012.style.backgroundColor = 'white';
-// }
+/* =========== 1PM ================ */
 
 if (hour1.hour < today.hour) {
     hour01.style.backgroundColor = 'blue';
@@ -133,6 +142,8 @@ if (hour1.hour < today.hour) {
     hour01.style.backgroundColor = 'white';
 }
 
+/* ========== 2pm ============== */
+
 if (hour2.hour < today.hour) {
     hour02.style.backgroundColor = 'blue';
     hour02.style.color = 'white';
@@ -142,6 +153,8 @@ if (hour2.hour < today.hour) {
 } else {
     hour02.style.backgroundColor = 'white';
 }
+
+/* ================= 3pm ========== */
 
 if (hour3.hour < today.hour) {
     hour03.style.backgroundColor = 'blue';
@@ -153,6 +166,8 @@ if (hour3.hour < today.hour) {
     hour04.style.backgroundColor = 'white';
 }
 
+/* =========== 4pm ============= */
+
 if (hour4.hour < today.hour) {
     hour04.style.backgroundColor = 'blue';
     hour04.style.color = 'white';
@@ -163,7 +178,7 @@ if (hour4.hour < today.hour) {
     hour04.style.backgroundColor = 'white';
 }
 
-
+/* =========== 5PM ============ */
 
 if (hour5.hour < today.hour) {
     hour05.style.backgroundColor = 'blue';
@@ -234,41 +249,3 @@ hour09.innerHTML = storage.getItem('hour9')
  hour04.innerHTML = storage.getItem('hour4')
 
  hour05.innerHTML = storage.getItem('hour5')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function saveTask() {
-//     const userInput = document.getElementsByClassName('toDo')
-//     for(i = 0; i < userInput.length; i++) {
-//         (console.log("userInput", userInput[i].value))
-//         thisBetterWork.push(JSON.stringify((userInput[i].value)));
-//     }
-//     if(thisBetterWork.value !== null || thisBetterWork.value !==undefined){
-//         console.log("sweet")
-//     }
-//     console.log("userInput", userInput)
-//     const taskInput = storage.setItem("thisBetterWork", (thisBetterWork)); 
-//     console.log('taskInput', taskInput)  
-// }
-
-// function keepTask() {
-    
-//     const userInput = document.getElementsByClassName("toDo");
-//     for(i=0; i < userInput.length; i++){
-//    
-//     }
-// }
