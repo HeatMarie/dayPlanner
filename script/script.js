@@ -51,36 +51,40 @@ let hour05 = document.getElementById('hour5')
 
 if (hour8.hour < today.hour) {
     hour08.style.backgroundColor = 'blue';
+    hour08.style.color = 'white';
 } else if (hour8.hour > today.hour){
     hour08.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour08.style.color = 'white';
 } else {
     hour08.style.backgroundColor = 'white';
 }
 
 if (hour9.hour < today.hour) {
     hour09.style.backgroundColor = 'blue';
+    hour09.style.color = 'white'
 } else if (hour9.hour > today.hour){
     hour09.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour09.style.color = 'white';
 } else {
     hour09.style.backgroundColor = 'white';
 }
 
 if (hour10.hour < today.hour) {
     hour010.style.backgroundColor = 'blue';
+    hour010.style.color = 'white'
 } else if (hour10.hour > today.hour){
     hour010.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour010.style.color = 'white';
 } else {
     hour010.style.backgroundColor = 'white';
 }
 
 if (hour11.hour < today.hour) {
     hour011.style.backgroundColor = 'blue';
+    hour011.style.color = 'white';
 } else if (hour11.hour > today.hour){
     hour011.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour011.style.color = 'white';
 } else {
     hour011.style.backgroundColor = 'white';
 }
@@ -88,6 +92,7 @@ if (hour11.hour < today.hour) {
 
 if (hour12.hour < today.hour) {
     hour012.style.backgroundColor = 'blue';
+    hour012.style.color = 'white';
 } else if (hour12.hour > today.hour){
     hour012.style.backgroundColor = 'purple';
     hour012.style.color = 'white';
@@ -95,29 +100,32 @@ if (hour12.hour < today.hour) {
     hour012.style.backgroundColor = 'white';
 }
 
-if (hour12.hour < today.hour) {
-    hour012.style.backgroundColor = 'blue';
-} else if (hour12.hour > today.hour){
-    hour012.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
-} else {
-    hour012.style.backgroundColor = 'white';
-}
+// if (hour12.hour < today.hour) {
+//     hour012.style.backgroundColor = 'blue';
+//     hour012.style.color = 'color';
+// } else if (hour12.hour > today.hour){
+//     hour012.style.backgroundColor = 'purple';
+//     hour012.style.color = 'white';
+// } else {
+//     hour012.style.backgroundColor = 'white';
+// }
 
 if (hour1.hour < today.hour) {
     hour01.style.backgroundColor = 'blue';
+    hour01.style.color = 'white'
 } else if (hour1.hour > today.hour){
     hour01.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour01.style.color = 'white';
 } else {
     hour01.style.backgroundColor = 'white';
 }
 
 if (hour2.hour < today.hour) {
     hour02.style.backgroundColor = 'blue';
+    hour02.style.color = 'white';
 } else if (hour2.hour > today.hour){
     hour02.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour02.style.color = 'white';
 } else {
     hour02.style.backgroundColor = 'white';
 }
@@ -127,7 +135,7 @@ if (hour3.hour < today.hour) {
     hour03.style.color = 'white';
 } else if (hour3.hour > today.hour){
     hour03.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour03.style.color = 'white';
 } else {
     hour04.style.backgroundColor = 'white';
 }
@@ -137,7 +145,7 @@ if (hour4.hour < today.hour) {
     hour04.style.color = 'white';
 } else if (hour4.hour > today.hour){
     hour04.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour04.style.color = 'white';
 } else {
     hour04.style.backgroundColor = 'white';
 }
@@ -146,9 +154,10 @@ if (hour4.hour < today.hour) {
 
 if (hour5.hour < today.hour) {
     hour05.style.backgroundColor = 'blue';
+    hour05.style.color = 'white';
 } else if (hour5.hour > today.hour){
     hour05.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
+    hour05.style.color = 'white';
 } else {
     hour05.style.backgroundColor = 'white';
 }

@@ -18,6 +18,10 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Charm&family=Rancho&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,19 +34,11 @@
       <p id="doingThings"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
-      <!-- <div id="hour8"></div>
-      <div id="hour9"></div>
-      <div id="hour10"></div>
-      <div id="hour11"></div>
-      <div id="hour12"></div>
-      <div></div> -->
-
-
+    
 
       <table class="time-block">
-
-        <form>
+        
+        <div class="row-container">
           <tr class="row" >
             <td class="col1 time-block">8AM</td>
             <td class="col2">
@@ -54,10 +50,10 @@
               <button class="saveBtn" type="submit">Save</button>
             </td>
           </tr>
-        </form>
+        </div>
 
-        <form>
-          <tr class="row" >
+        <div class="row-container">
+          <tr class="row">
             <td class="col1 time-block">9AM</td>
             <td class="col2">
               <textarea class="toDo textarea" type="text" name="hour9" id="hour9" > </textarea>
@@ -67,95 +63,96 @@
               <button class="saveBtn" type="submit">Save</button>
             </td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1 theBad">10AM</td>
+            <td class="col1 time-block theBad">10AM</td>
             <td class="col2">
-              <textarea class="toDo textarea" type="text" id="hour10"> </textarea>
+              <textarea class="toDo textarea" type="text" name="hour10" id="hour10"> </textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button>
             </td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1 theBad">11AM</td>
+            <td class="col1 time-block theBad">11AM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour11" name="midnight"> </textarea>
+              <textarea class="toDo textarea" type="text" id="hour11" name="hour11"> </textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button></td>
           </tr>
-        </form>
-        <form>
-          <tr class="row ">
-            <td class="col1 theBad ">12PM</td>
+        </div>
+
+        <div class="row-container">
+          <tr class="row">
+            <td class="col1 time-block theBad">12PM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour12" name="midnight"></textarea>
+              <textarea class="toDo textarea" type="text" id="hour12" name="hour12"></textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button></td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1">1PM</td>
+            <td class="col1 time-block">1PM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour1" name="midnight"> </textarea>
+              <textarea class="toDo textarea" type="text" id="hour1" name="hour1"> </textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button></td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1">2PM</td>
+            <td class="col1 time-block">2PM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour2" name="midnight"> </textarea>
+              <textarea class="toDo textarea" type="text" id="hour2" name="hour2"> </textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button></td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1">3PM</td>
+            <td class="col1 time-block">3PM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour3" name="midnight"> </textarea>
+              <textarea class="toDo textarea" type="text" id="hour3" name="hour3"> </textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button></td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1">4PM</td>
+            <td class="col1 time-block">4PM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour4" name="midnight"></textarea>
+              <textarea class="toDo textarea" type="text" id="hour4" name="hour4"></textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit">Save</button></td>
           </tr>
-        </form>
+        </div>
 
-        <form>
+        <div class="row-container">
           <tr class="row" >
-            <td class="col1">5PM</td>
+            <td class="col1 time-block">5PM</td>
             <td class="col2">
-              <textarea class="toDo" type="text" id="hour5" name="midnight"></textarea>
+              <textarea class="toDo textarea" type="text" id="hour5" name="hour5"></textarea>
             </td>
             <td class="col3">
               <button class="saveBtn" type="submit"S>Save</button></td>
           </tr>
-        </form>
+        </div>
 
       </table>
     </div>
