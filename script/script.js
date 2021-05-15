@@ -6,22 +6,25 @@ let dt = DateTime.now().toLocaleString(DateTime.DATE_FULL);
 const today = DateTime.local();
 console.log("today", today)
 let h = today.get('hour')
-let daySuffix;
+
+
+
+let ordinalNumber;
 let dayToString = today.day.toString();
 // determine which suffix to use on day
-if (dayToString.endsWith("1")) {
-  daySuffix = "st";
-} else if (dayToString.endsWith("2")) {
-  daySuffix = "nd";
-} else if (dayToString.endsWith("3")) {
-  daySuffix = "rd";
+if (dayToString.endsWith("1" || "31" || "21")) {
+  ordinalNumber = "st";
+} else if (dayToString.endsWith("2" || "22")) {
+  ordinalNumber = "nd";
+} else if (dayToString.endsWith("3" || "23")) {
+  ordinalNumber = "rd";
 } else {
-  daySuffix = "th";
+  ordinalNumber = "th";
 }
 
 // display the current day in the currendDay p
 currentDay.innerText =
-  today.weekdayLong + ", " + today.monthLong + " " + today.day + daySuffix;
+  today.weekdayLong + ", " + today.monthLong + " " + today.day + ordinalNumber;
 
 
 
@@ -37,8 +40,6 @@ let hour2 = today.set({hour: 14})
 let hour3 = today.set({hour: 15})
 let hour4 = today.set({hour: 16})
 let hour5 = today.set({hour: 17})
-
-console.log(hour5);
 
 /* Sets the variable to obtain by element */
 
@@ -200,8 +201,7 @@ const saveBtn = document.getElementsByClassName("saveBtn");
 for (i of saveBtn) {
     i.addEventListener('click', function(event) {
         event.preventDefault();
-        console.log("click")
-        saveTask()
+        saveTask();
     })
 }
 

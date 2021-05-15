@@ -48,7 +48,9 @@ https://heatmarie.github.io/dayPlanner/
 
 So here we have it. A new day planner that I will never use. And only because I struggle with the use of them. So how did this go? 
 
-Using Luxon was actually pretty simple. 
+Using Luxon was simple enough. 
+
+Looping through all the things was a challenge. However, my first mission is/was to get it working. Now that it works. I do plan to continue to work on it and eventually shorten the script to keep from repeating all the things. 
 
 
 ![GitHub followers](https://img.shields.io/github/followers/HeatMarie?color=%20%20%23c0640fb4&logo=Github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
