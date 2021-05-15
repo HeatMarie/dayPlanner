@@ -3,14 +3,27 @@ const DateTime = luxon.DateTime;
 const Duration = luxon.Duration;
 let dt = DateTime.now().toLocaleString(DateTime.DATE_FULL);
 
-
-
-
-currentDay.innerHTML = dt;
-
 const today = DateTime.local();
 console.log("today", today)
 let h = today.get('hour')
+let daySuffix;
+let dayToString = today.day.toString();
+// determine which suffix to use on day
+if (dayToString.endsWith("1")) {
+  daySuffix = "st";
+} else if (dayToString.endsWith("2")) {
+  daySuffix = "nd";
+} else if (dayToString.endsWith("3")) {
+  daySuffix = "rd";
+} else {
+  daySuffix = "th";
+}
+
+// display the current day in the currendDay p
+currentDay.innerText =
+  today.weekdayLong + ", " + today.monthLong + " " + today.day + daySuffix;
+
+
 
 /* TODO: Check to see if this can become an array of some kind 
         - can you push these into an array? I mean, I know you can, I can do whatever I want. But... Will that work? 
