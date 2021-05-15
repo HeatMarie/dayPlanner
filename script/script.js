@@ -124,6 +124,7 @@ if (hour2.hour < today.hour) {
 
 if (hour3.hour < today.hour) {
     hour03.style.backgroundColor = 'blue';
+    hour03.style.color = 'white';
 } else if (hour3.hour > today.hour){
     hour03.style.backgroundColor = 'purple';
     hour012.style.color = 'white';
@@ -133,6 +134,7 @@ if (hour3.hour < today.hour) {
 
 if (hour4.hour < today.hour) {
     hour04.style.backgroundColor = 'blue';
+    hour04.style.color = 'white';
 } else if (hour4.hour > today.hour){
     hour04.style.backgroundColor = 'purple';
     hour012.style.color = 'white';
@@ -163,31 +165,88 @@ for (i of saveBtn) {
         event.preventDefault();
         console.log("click")
         saveTask()
-        keepTask()
     })
 }
 
+
+/* ============= EventListener ============ */
 const storage = window.localStorage;
 const thisBetterWork = [];
 
+
+/* ============== Local Storage =========== */
+
+
 function saveTask() {
-    const userInput = document.getElementsByClassName('toDo')
-    for(i = 0; i < userInput.length; i++) {
-        
-        (console.log("userInput", userInput[i].value))
-        thisBetterWork.push(userInput[i].value);
-        console.log("thisBetterWork", thisBetterWork)
-      
-    }
-    console.log("userInput", userInput)
-    const taskInput = storage.setItem("thisBetterWork", JSON.stringify(thisBetterWork)); 
-    console.log('taskInput', taskInput)  
-     
+    
+storage.setItem("hour8", hour08.value);
+storage.setItem("hour9", hour09.value);
+storage.setItem("hour10", hour010.value);
+storage.setItem("hour11", hour011.value);
+storage.setItem("hour12", hour012.value);
+storage.setItem("hour1", hour01.value);
+storage.setItem("hour2", hour02.value);
+storage.setItem("hour3", hour03.value);
+storage.setItem("hour4", hour04.value);
+storage.setItem("hour5", hour05.value);
 }
 
-function keepTask() {
+
+let userInput = storage.getItem('hour8')
+hour08.innerHTML = userInput;  
+
+hour09.innerHTML = storage.getItem('hour9')
+ 
+ hour010.innerHTML = storage.getItem('hour10')
+
+ hour011.innerHTML = storage.getItem('hour11')
+ 
+ hour012.innerHTML = storage.getItem('hour12')
+ 
+ hour01.innerHTML= storage.getItem('hour1')
+ 
+ hour02.innerHTML= storage.getItem('hour2')
+
+ hour03.innerHTML= storage.getItem('hour3')
+
+ hour04.innerHTML = storage.getItem('hour4')
+
+ hour05.innerHTML = storage.getItem('hour5')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function saveTask() {
+//     const userInput = document.getElementsByClassName('toDo')
+//     for(i = 0; i < userInput.length; i++) {
+//         (console.log("userInput", userInput[i].value))
+//         thisBetterWork.push(JSON.stringify((userInput[i].value)));
+//     }
+//     if(thisBetterWork.value !== null || thisBetterWork.value !==undefined){
+//         console.log("sweet")
+//     }
+//     console.log("userInput", userInput)
+//     const taskInput = storage.setItem("thisBetterWork", (thisBetterWork)); 
+//     console.log('taskInput', taskInput)  
+// }
+
+// function keepTask() {
     
-    let userInput = document.getElementsByClassName("toDo").value;
-    
-    userInput[i].value.innerHTML = storage.getItem("thisBetterWork");
-}
+//     const userInput = document.getElementsByClassName("toDo");
+//     for(i=0; i < userInput.length; i++){
+//    
+//     }
+// }
