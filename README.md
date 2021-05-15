@@ -9,14 +9,9 @@ Making a thing that's makes me wish I was a little more organized. I should real
 
 - Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. 
 
--This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
+- This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
 
--Use Luxon library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
-
-User Story
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
+- Use Luxon library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
 
 #### Acceptance Criteria
 
@@ -38,7 +33,23 @@ SO THAT I can manage my time effectively
 - When the user refreshes the page
     - the saved events persist
 
-## The Final Project
+## The Results
 
 <img src="./img/Capture.JPG">
 <img src="./img/Capture2.JPG">
+
+
+## Link to the Website 
+
+https://heatmarie.github.io/dayPlanner/
+
+
+## Comments 
+
+So here we have it. A new day planner that I will never use. And only because I struggle with the use of them. So how did this go? 
+
+Using Luxon was actually pretty simple. 
+
+
+![GitHub followers](https://img.shields.io/github/followers/HeatMarie?color=%23c0640fb4&style=social)
+
