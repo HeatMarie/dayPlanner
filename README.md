@@ -46,11 +46,17 @@ https://heatmarie.github.io/dayPlanner/
 
 ## Comments 
 
-So here we have it. A new day planner that I will never use. And only because I struggle with the use of them. So how did this go? 
+So here we have it. A new day planner that I should really consider using. Will I? Probably not, and that is only because I struggle to actually plan things. So how did this project go? 
 
-Using Luxon was simple enough. 
+The first mission for me was making sure I understood luxon and putting it into the code. Surprisely, after a view reads the process went smoothly.  
 
-Looping through all the things was a challenge. However, my first mission is/was to get it working. Now that it works. I do plan to continue to work on it and eventually shorten the script to keep from repeating all the things. 
+I got stuck on trying to loop through all the things. On Thursday night, I decided it was time to just make things work. There is no reason why I can't go back when I have the time to clean it up and make the code look pretty. 
+
+It was in this project that I really understood what it mean to first make a MVP (minimum viable product). I do believe that if I would have got things working first, then went back to figure out a better way to do things, I wouldn't have struggled so much. See, there is that fear of failing and never finishing things that causes anxiety and then you begin question if you know what you are doing. 
+
+In the end there is always something to elarn, whether it is more about how certain code works, or the how to mentally get around the struggles. Either way, it's about learning something, isn't it? 
+
+
 
 
 ![GitHub followers](https://img.shields.io/github/followers/HeatMarie?color=%20%20%23c0640fb4&logo=Github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
