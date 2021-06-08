@@ -58,6 +58,9 @@ In the end there is always something to elarn, whether it is more about how cert
 
 ## Technologies Used 
 JavaScript
+Luxon
+CSS
+HTML
 
 
 ![GitHub followers](https://img.shields.io/github/followers/HeatMarie?color=%20%20%23c0640fb4&logo=Github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
