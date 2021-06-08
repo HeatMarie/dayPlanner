@@ -56,7 +56,7 @@ It was in this project that I really understood what it mean to first make a MVP
 
 In the end there is always something to elarn, whether it is more about how certain code works, or the how to mentally get around the struggles. Either way, it's about learning something, isn't it? 
 
-
+## Technologies Used 
 
 
 ![GitHub followers](https://img.shields.io/github/followers/HeatMarie?color=%20%20%23c0640fb4&logo=Github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
