@@ -63,6 +63,13 @@ In the end there is always something to elarn, whether it is more about how cert
 - HTML
 
 
+## Contact Information 
+
+Heather Bjoin 
+
+h.m.bjoin@gmail.com
+
+
 ![GitHub followers](https://img.shields.io/github/followers/HeatMarie?color=%20%20%23c0640fb4&logo=Github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
 
 ![GitHub User's stars](https://img.shields.io/github/stars/HeatMarie?color=%20%20%23c0640fb4&logo=github&logoColor=%20%20%23c0640fb4&style=for-the-badge)
