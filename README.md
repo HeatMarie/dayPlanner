@@ -65,7 +65,7 @@ In the end there is always something to elarn, whether it is more about how cert
 
 ## Contact Information 
 
-Heather Bjoin 
+### Heather Bjoin 
 
 h.m.bjoin@gmail.com
 
