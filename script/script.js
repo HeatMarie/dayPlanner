@@ -12,7 +12,9 @@ let h = today.get('hour')
 let ordinalNumber;
 let dayToString = today.day.toString();
 // determine which suffix to use on day
-if (dayToString.endsWith("1" || "31" || "21")) {
+if (dayToString.includes('11' || '12' || '13')){
+    ordinalNumber = "th"
+} else if (dayToString.endsWith("1" || "31" || "21")) {
   ordinalNumber = "st";
 } else if (dayToString.endsWith("2" || "22")) {
   ordinalNumber = "nd";
@@ -30,6 +32,8 @@ currentDay.innerText =
 
 /* Selects each element and gives it its special hour*/
 
+let hours = [];
+
 let hour8 = today.set({hour: 8})
 let hour9 = today.set({hour: 9})
 let hour10 = today.set({hour: 10})
@@ -41,8 +45,12 @@ let hour3 = today.set({hour: 15})
 let hour4 = today.set({hour: 16})
 let hour5 = today.set({hour: 17})
 
-/* Sets the variable to obtain by element */
+hours.push(hour8, hour9, hour10, hour11, hour12, hour1, hour2, hour3, hour4, hour5)
+console.log('hours', hours)
 
+
+/* Sets the variable to obtain by element */
+let hour_elements = [];
 let hour08 = document.getElementById('hour8')
 let hour09 = document.getElementById('hour9')
 let hour010 = document.getElementById('hour10')
@@ -54,6 +62,25 @@ let hour03 = document.getElementById('hour3')
 let hour04 = document.getElementById('hour4')
 let hour05 = document.getElementById('hour5')
 
+hour_elements.push(hour08, hour09, hour010, hour011, hour012, hour01, hour02, hour03, hour04, hour05);
+console.log('hour elements', hour_elements)
+
+
+
+hours.forEach(hour => {
+    hour_elements.forEach(element => {
+        if(hour.hour < today.hour) {
+            element.style.backgroundColor = 'blue';
+            element.style.color = 'white';
+        } else if(hour.hour > today.hour) {
+            element.style.backgroundColor = 'purple';
+            element.style.color = 'white'
+        } else {
+            element.style.backgroundColor = 'white';
+        }
+        console.log(hour.hour)
+    })
+})
 
 
 /* Each if statement runs through to check if the element is
@@ -70,130 +97,6 @@ let hour05 = document.getElementById('hour5')
             backgroundColor: white;
 
 */
-
-/* =============== 8AM =============== */
-if (hour8.hour < today.hour) {
-    hour08.style.backgroundColor = 'blue';
-    hour08.style.color = 'white';
-} else if (hour8.hour > today.hour){
-    hour08.style.backgroundColor = 'purple';
-    hour08.style.color = 'white';
-} else {
-    hour08.style.backgroundColor = 'white';
-}
-
-/* ============= 9AM ================= */
-
-if (hour9.hour < today.hour) {
-    hour09.style.backgroundColor = 'blue';
-    hour09.style.color = 'white'
-} else if (hour9.hour > today.hour){
-    hour09.style.backgroundColor = 'purple';
-    hour09.style.color = 'white';
-} else {
-    hour09.style.backgroundColor = 'white';
-}
-
-/* ============== 10AM ============== */
-
-if (hour10.hour < today.hour) {
-    hour010.style.backgroundColor = 'blue';
-    hour010.style.color = 'white'
-} else if (hour10.hour > today.hour){
-    hour010.style.backgroundColor = 'purple';
-    hour010.style.color = 'white';
-} else {
-    hour010.style.backgroundColor = 'white';
-}
-
-/* ============= 11AM =============== */
-
-if (hour11.hour < today.hour) {
-    hour011.style.backgroundColor = 'blue';
-    hour011.style.color = 'white';
-} else if (hour11.hour > today.hour){
-    hour011.style.backgroundColor = 'purple';
-    hour011.style.color = 'white';
-} else {
-    hour011.style.backgroundColor = 'white';
-}
-
-
-/* ============== 12PM ============= */
-
-if (hour12.hour < today.hour) {
-    hour012.style.backgroundColor = 'blue';
-    hour012.style.color = 'white';
-} else if (hour12.hour > today.hour){
-    hour012.style.backgroundColor = 'purple';
-    hour012.style.color = 'white';
-} else {
-    hour012.style.backgroundColor = 'white';
-}
-
-/* =========== 1PM ================ */
-
-if (hour1.hour < today.hour) {
-    hour01.style.backgroundColor = 'blue';
-    hour01.style.color = 'white'
-} else if (hour1.hour > today.hour){
-    hour01.style.backgroundColor = 'purple';
-    hour01.style.color = 'white';
-} else {
-    hour01.style.backgroundColor = 'white';
-}
-
-/* ========== 2pm ============== */
-
-if (hour2.hour < today.hour) {
-    hour02.style.backgroundColor = 'blue';
-    hour02.style.color = 'white';
-} else if (hour2.hour > today.hour){
-    hour02.style.backgroundColor = 'purple';
-    hour02.style.color = 'white';
-} else {
-    hour02.style.backgroundColor = 'white';
-}
-
-/* ================= 3pm ========== */
-
-if (hour3.hour < today.hour) {
-    hour03.style.backgroundColor = 'blue';
-    hour03.style.color = 'white';
-} else if (hour3.hour > today.hour){
-    hour03.style.backgroundColor = 'purple';
-    hour03.style.color = 'white';
-} else {
-    hour04.style.backgroundColor = 'white';
-}
-
-/* =========== 4pm ============= */
-
-if (hour4.hour < today.hour) {
-    hour04.style.backgroundColor = 'blue';
-    hour04.style.color = 'white';
-} else if (hour4.hour > today.hour){
-    hour04.style.backgroundColor = 'purple';
-    hour04.style.color = 'white';
-} else {
-    hour04.style.backgroundColor = 'white';
-}
-
-/* =========== 5PM ============ */
-
-if (hour5.hour < today.hour) {
-    hour05.style.backgroundColor = 'blue';
-    hour05.style.color = 'white';
-} else if (hour5.hour > today.hour){
-    hour05.style.backgroundColor = 'purple';
-    hour05.style.color = 'white';
-} else {
-    hour05.style.backgroundColor = 'white';
-}
-
-
-
-
 
 /* *********** Event Listener ************* */
 const saveBtn = document.getElementsByClassName("saveBtn");
