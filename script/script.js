@@ -46,7 +46,6 @@ let hour4 = today.set({hour: 16})
 let hour5 = today.set({hour: 17})
 
 hours.push(hour8, hour9, hour10, hour11, hour12, hour1, hour2, hour3, hour4, hour5)
-console.log('hours', hours)
 
 
 /* Sets the variable to obtain by element */
@@ -63,24 +62,6 @@ let hour04 = document.getElementById('hour4')
 let hour05 = document.getElementById('hour5')
 
 hour_elements.push(hour08, hour09, hour010, hour011, hour012, hour01, hour02, hour03, hour04, hour05);
-console.log('hour elements', hour_elements)
-
-
-
-hours.forEach(hour => {
-    hour_elements.forEach(element => {
-        if(hour.hour < today.hour) {
-            element.style.backgroundColor = 'blue';
-            element.style.color = 'white';
-        } else if(hour.hour > today.hour) {
-            element.style.backgroundColor = 'purple';
-            element.style.color = 'white'
-        } else {
-            element.style.backgroundColor = 'white';
-        }
-        console.log(hour.hour)
-    })
-})
 
 
 /* Each if statement runs through to check if the element is
@@ -98,6 +79,20 @@ hours.forEach(hour => {
 
 */
 
+hours.forEach(hour => {
+    hour_elements.forEach(element => {
+        if(hour.hour < today.hour) {
+            element.style.backgroundColor = 'blue';
+            element.style.color = 'white';
+        } else if(hour.hour > today.hour) {
+            element.style.backgroundColor = 'purple';
+            element.style.color = 'white'
+        } else {
+            element.style.backgroundColor = 'white';
+        }
+    })
+})
+
 /* *********** Event Listener ************* */
 const saveBtn = document.getElementsByClassName("saveBtn");
 
@@ -108,7 +103,6 @@ for (i of saveBtn) {
     })
 }
 
-
 /* ============= EventListener ============ */
 const storage = window.localStorage;
 const thisBetterWork = [];
@@ -116,39 +110,15 @@ const thisBetterWork = [];
 
 /* ============== Local Storage =========== */
 
-
 function saveTask() {
-    
-storage.setItem("hour8", hour08.value);
-storage.setItem("hour9", hour09.value);
-storage.setItem("hour10", hour010.value);
-storage.setItem("hour11", hour011.value);
-storage.setItem("hour12", hour012.value);
-storage.setItem("hour1", hour01.value);
-storage.setItem("hour2", hour02.value);
-storage.setItem("hour3", hour03.value);
-storage.setItem("hour4", hour04.value);
-storage.setItem("hour5", hour05.value);
+    for (let i = 0; i < hour_elements.length; i++){
+        let key = hour_elements[i].name; 
+        storage.setItem(key, hour_elements[i].value)
+        console.log(hour_elements[i].name)
+    }
 }
 
-
-let userInput = storage.getItem('hour8')
-hour08.innerHTML = userInput;  
-
-hour09.innerHTML = storage.getItem('hour9')
- 
- hour010.innerHTML = storage.getItem('hour10')
-
- hour011.innerHTML = storage.getItem('hour11')
- 
- hour012.innerHTML = storage.getItem('hour12')
- 
- hour01.innerHTML= storage.getItem('hour1')
- 
- hour02.innerHTML= storage.getItem('hour2')
-
- hour03.innerHTML= storage.getItem('hour3')
-
- hour04.innerHTML = storage.getItem('hour4')
-
- hour05.innerHTML = storage.getItem('hour5')
+hour_elements.forEach((element, i) => {
+    element.innerHTML = storage.getItem(element.name)
+    console.log('element', element.name)
+})
